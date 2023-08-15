@@ -1,0 +1,142 @@
+.noselect {
+  cursor: default;
+  user-select: none;
+}
+
+.note-box {
+  width: calc(33.33% - 20px); /* Three cards per row */
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .note-box {
+    flex: 1 0 calc(50% - 20px); /* Two tiles per row on smaller screens */
+  }
+
+  .note-box:hover {
+    background-color: rgb(241, 240, 182);
+    border: 1px solid rgb(21, 70, 195);
+  }
+}
+
+.text-wrap {
+  /* Text wrapping styles */
+  max-height: 250px; /* Set a maximum height for the card */
+  overflow: hidden; /* Hide overflow content */
+  word-wrap: break-word; /* Break long words and wrap text */
+}
+.note-box:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(21, 70, 195);
+}
+
+/* For Show Note Pop Up */
+
+.showNote-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(189, 189, 189, 0.9);
+}
+.showNote-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  resize: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .showNote-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 90%; /* Adjust as needed */
+    max-width: 400px; /* Adjust as needed */
+    padding: 1rem; /* Adjust padding for smaller screens */
+    border-radius: 0.5rem;
+    resize: none;
+    background-color: #ffffff;
+  }
+}
+
+.add-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh;
+  padding: 0 20px; */
+}
+
+.note-box-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+} */
+
+
+/* Styles for the responsive footer */
+/* .footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+} */
+
+/* Media query for responsiveness */
